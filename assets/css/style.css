@@ -1,20 +1,64 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
+.skills-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
 
-/**
- * copyright 2022 @codewithsadee
- */
+.skills-item {
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.title-wrapper {
+  display: flex;
+  align-items: center;
+}
 
+.skill-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
 
+.h5 {
+  font-size: 1.2em;
+  margin: 0;
+}
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-list {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
+@media (max-width: 480px) {
+  .skills-list {
+      grid-template-columns: 1fr;
+  }
+}
 
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale video to cover entire viewport */
+  z-index: -1; /* Place video behind other content */
+}
 :root {
 
   /**
@@ -35,7 +79,7 @@
   ), hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
+    hsl(204, 12%, 92%) 0%, 
     hsla(36, 100%, 69%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
@@ -50,8 +94,8 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    hsl(187, 97%, 58%), 
+    hsl(187, 96%, 60%)
   );
 
   /* solid */
@@ -63,8 +107,8 @@
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --orange-yellow-crayola: hsl(185, 100%, 59%);
+  --vegas-gold: hwb(188 28% 0%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -181,7 +225,6 @@ article {
   background: var(--jet);
   margin: 16px 0;
 }
-
 .icon-box {
   position: relative;
   background: var(--border-gradient-onyx);
